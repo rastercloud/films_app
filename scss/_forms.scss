@@ -1,0 +1,97 @@
+label, input, textarea {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.form-container {
+    padding: 2rem;
+    display: block;
+    width: 70%;
+    text-align: left;
+    margin: 2rem auto;
+    background-color: white;
+    -webkit-box-shadow: 8px 8px 14px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 14px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 14px 0px rgba(66, 68, 90, 1);
+    border-radius: 1rem;
+}
+
+.form__input {
+    display: block;
+    min-height: 3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 3px solid var(--main-purple);
+    border-radius: .5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    :valid {
+        border-color: var(--main-purple);
+    }
+
+    &:invalid {
+        border-color: var(--main-red);
+    }
+
+}
+
+.select {
+        width: 30%;
+        height: 4rem;
+        border: 3px solid var(--main-purple);
+        border-radius: .5rem;
+        padding: .8rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#titleError, #availableError, #movieAdded, #movieAddedErr {
+    display: none;
+    font-size: 0.8em;
+}
+
+#titleError.visible, #availableError.visible {
+    color: var(--main-red);
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: -.5rem;
+    font-size: .9rem;
+}
+
+#movieAdded.visible {
+    text-align: center;
+    color: var(--main-blue);
+    display: block;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+#movieAddedErr.visible {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--main-red);
+    display: block;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+}
+
+input.invalid {
+    border: 3px solid red;
+}

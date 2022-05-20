@@ -1,0 +1,23 @@
+{
+  "name": "Movie App",
+  "version": "1.0.0",
+  "description": "Movie Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "minify": "gulp minify"
+  },
+  "keywords": [],
+  "author": "Radoslaw Rucinski",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "gulp": "^4.0.2",
+    "sass": "^1.49.11"
+  },
+  "devDependencies": {
+    "gulp-purgecss": "^4.1.3",
+    "gulp-sass": "^5.1.0"
+  }
+}

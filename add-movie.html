@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add movie | Movie App</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__menu">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="hamburger__text">menu</div>
+            </div>
+            <div class="title">
+                <h3>Wypożyczalnia filmów</h3>
+            </div>
+            <div>
+                <img class="container__menu--img" src="images/video-camera-white.png" alt="Video camera">
+            </div>
+        </div>
+
+        <menu class="navbar">
+            <ul>
+                <li>
+                    <a href="index.html">
+                    <img class="menu__img" src="images/list.png" alt="Lista"></a>
+                    <a href="index.html">Lista filmów</a>
+                </li>
+                <li>
+                    <a href="add-movie.html">
+                        <img class="menu__img" src="images/add.png" alt="Dodaj film"></a>
+                        <a href="add-movie.html">Dodaj film</a>
+                </li>
+            </ul>
+        </menu>
+
+        <div class="form-container">
+            <h2 class="center">Dodaj nowy film do bazy</h2>
+            <h5 class="center">Proszę uzupełnić pola formularza:</h5>
+            <form class="form" id="movieForm" action="submit" method="post">
+                <label for="title" class="label">Tytuł (wymagane)</label>
+                <input id="title" class="form__input" type="text" name="title">
+                <span role="alert" id="titleError" aria-hidden="true">Proszę wpisać tytuł filmu</span>
+
+                <label for="description">Opis filmu</label>
+                <textarea id="description" class="form__input" name="description" minlength="3"
+                    maxlength="500"></textarea>
+
+                <label for="author">Autor</label>
+                <input id="author" type="text" class="form__input" name="author" minlength="3" maxlength="50">
+
+                <label for="year">Rok produkcji</label>
+                <input id="year" type="date" class="form__input" name="year">
+
+                <p class="mt-2"><strong>Dostępny:</strong></p>
+                <label for="available">Tak</label>
+                <input type="radio" name="available" id="isAvailable" value="true"><br />
+                <label for="isAvailable">Nie</label>
+                <input type="radio" name="available" id="isAvailable" value="false">
+                <span role="alert" name="availableError" id="availableError" aria-hidden="true" class="error">Proszę
+                    wybrać jedną z opcji<br /></span>
+
+                <div class="buttons mt-2">
+                    <button class="btn--sm" id="submit" type="submit" name="submit">Wyślij</button>
+                    <button class="btn__reset" onclick="resetFormFields()">Wyczyść dane formularza</button>
+                </div>
+            </form>
+            <span id="movieAdded">Pomyślnie dodano film do bazy!</span>
+            <span id="movieAddedErr">Nie udało się dodać filmu do bazy!<br />Proszę poprawnie wypełnić formularz.</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>
